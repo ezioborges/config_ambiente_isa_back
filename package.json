@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "cors": "^2.8.5",
     "dotenv": "^16.5.0",
     "express": "^5.1.0",
     "mongoose": "^8.15.1"
@@ -7,6 +8,7 @@
   "name": "polvinho_backend",
   "version": "1.0.0",
   "main": "app.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node src/app.js",
@@ -30,7 +32,7 @@
     "prettier": "^3.5.3",
     "prettier-plugin-organize-imports": "^4.1.0"
   },
-  "lint-staged": {  
+  "lint-staged": {
     "*.{js,mjs,cjs}": [
       "eslint --fix",
       "prettier --write",
