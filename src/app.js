@@ -9,9 +9,10 @@ const port = process.env.PORT || 3000;
 app.use(express.json());
 // faz com que o express entenda JSON com o tipo 'Content-Type: application/json'
 // ou seja, toda vez que vc enviar um JSON no corpo da requisição
-//o express vai transformar o JSON EM obj para ser usado no código, sem precisar fazer manualmente com um body-parser (JSON.parse())
+//o express vai transformar o JSON em obj para ser usado no código, sem precisar fazer manualmente com um body-parser (JSON.parse())
+
 app.use(express.urlencoded({ extended: true }));
-// quando um formulário o navegador faz um POST na rota com os dados em formato 'application/x-www-form-urlencoded'
+// quando recebe um formulário o navegador faz um POST na rota com os dados em formato 'application/x-www-form-urlencoded'
 // no back-end com a linha ativada da pra acessar os dados do formulário do req.body (quando eu tentei fazer o rerq.body, foi por isso que não funcionou)
 
 app.use(cors());
