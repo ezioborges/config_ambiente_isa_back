@@ -4,6 +4,7 @@ import 'dotenv/config';
 import express from 'express';
 
 const app = express();
+const port = process.env.PORT || 3000;
 
 app.use(express.json());
 // faz com que o express entenda JSON com o tipo 'Content-Type: application/json'
@@ -31,7 +32,5 @@ app.get('/aluno', function (req, res) {
 app.get('/professor', function (req, res) {
 	res.send('Page professor');
 });
-
-const port = process.env.PORT || 3000;
 
 app.listen(port, () => console.log(`rodando na porta ${port}`));
